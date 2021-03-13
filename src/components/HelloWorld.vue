@@ -30,12 +30,23 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent, PropType } from 'vue'
+
+interface Book {
+  title: string
+  author: string
+  year: number
+}
+
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: {
       type: String,
+      required: true
+    },
+    book: {
+      type: Object as PropType<Book>,
       required: true
     }
   },

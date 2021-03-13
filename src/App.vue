@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HelloWorld :msg="1" :book="{ author: 'ziga', title: 'knjiga', year: '2021' }" />
 </template>
 
 <script lang="ts">
