@@ -11,6 +11,16 @@ export default defineComponent({
   name: 'App',
   components: {
     HelloWorld
+  },
+  setup() {
+    let i = 3
+    try {
+      i() // yay, vue-tsc will catch this error!
+    } catch {
+      // no-op
+    }
+
+    return { i }
   }
 })
 </script>
